@@ -1,0 +1,3 @@
+[submodule "Koturn.Windows.Consoles"]
+	path = Koturn.Windows.Consoles
+	url = https://github.com/koturn/Koturn.Windows.Consoles.git

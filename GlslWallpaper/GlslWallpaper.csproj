@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworks>net10.0-windows;net481</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <WarningLevel>8</WarningLevel>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <EnableDefaultApplicationDefinition>false</EnableDefaultApplicationDefinition>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <LangVersion>14</LangVersion>
+    <Title>GlslWallpaper</Title>
+    <Version>0.1.0</Version>
+    <Authors>koturn</Authors>
+    <Company>koturn</Company>
+    <Description>GLSL wallpaper for Windows.</Description>
+    <Copyright>Copyright (C) 2026 koturn All Rights Reserverd.</Copyright>
+    <PackageProjectUrl>https://github.com/koturn/GlslWallpaper</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/koturn/GlslWallpaper</RepositoryUrl>
+    <PackageTags>Windows;WPF;OpenGL;GLSL;Wallpaper</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Remove="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\frag300es.glsl" />
+    <None Remove="Resources\noise.glsl" />
+    <None Remove="Resources\vert100.glsl" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\frag300es.glsl" />
+    <EmbeddedResource Include="Resources\noise.glsl" />
+    <EmbeddedResource Include="Resources\vert100.glsl" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Koturn.Windows.Consoles\Koturn.Windows.Consoles\Koturn.Windows.Consoles.csproj" />
+  </ItemGroup>
+
+</Project>
